@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="css/todo.css">
+    <title>todo</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>我的todo</h1>
+        <form class="add-task clearfix">
+            <input type="text" name="content" value="" placeholder="添加一些信息" autofocus autocomplete="off">
+            <button type="submit">submit</button>
+        </form>
+        <div class="task-list">
+
+            <div class="task-item">
+                <span><input type="checkbox"></span>
+                <span class="task-content">' + data.content + '</span>
+                <span>——'+data.date+'</span>
+                <span class="right">
+                <span class="active delete">删除</span>
+                <span class="active detail">    详细</span>
+                </span>
+            </div>
+            <div class="task-item">
+                <span><input type="checkbox"></span>
+                <span class="task-content">' + data.content + '</span>
+                <span>——'+data.date+'</span>
+                <span class="right">
+                <span class="active delete">删除</span>
+                <span class="active detail">    详细</span>
+                </span>
+            </div>
+            <div class="task-item">
+                <span><input type="checkbox"></span>
+                <span class="task-content">' + data.content + '</span>
+                <span>——'+data.date+'</span>
+                <span class="right">
+                <span class="active delete">删除</span>
+                <span class="active detail">    详细</span>
+                </span>
+            </div>
+
+        </div>
+
+        <dic class="task-detail-mask"></dic>
+        <div class="task-detail">
+            <form>
+                <div class="content">
+                    item.content
+                </div>
+                <div>
+                    <input style="display:none" type="text" name="content" value='+item.content+'>
+                </div>
+                <div>
+                    <div class="desc">
+                        <textarea name="desc">' +item.desc+ '</textarea>
+                    </div>
+                </div>
+                <div class="remind">
+                    <input type="date" name="remind_date" value=' + item.date + '>
+                    <button type="submit">submit</button>
+                </div>
+            </form>
+        </div>
+        <button class="reset right">reset</button>
+        <button class="done left">done</button>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="node_modules/store/dist/store.legacy.min.js" charset="utf-8"></script>
+    <script src="js/todo.js" charset="utf-8"></script>
+</body>
+
+</html>

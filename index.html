@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/todo.css">
+    <style media="screen">
+    *{
+        outline:0;
+    }
+    body {
+        background: #94c9cc;
+        color:#333;
+    }
+    </style>
+    <title>todo</title>
+</head>
+
+<body>
+    <div class="container myTodo">
+
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="node_modules/store/dist/store.legacy.min.js" charset="utf-8"></script>
+    <script src="js/todo.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    $('.container').myTodo({
+        h1:'todo组件模板'
+    })
+    </script>
+</body>
+
+</html>
